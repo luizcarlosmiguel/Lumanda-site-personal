@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoal Page</title>
+</head>
+    <style>
+        h1{
+            position: fixed; left: 50%; top: 35%; transform: translate(-50%, -50%);
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+<body>
+    <h1>Lumanda</h1>
+    <form onclick="acesspaglogin(); return false">
+        <button title="Acessar Página de Login" ; style="position: fixed; left: 0; top: 705px; margin: 0 auto; width: 100%; height: 40px; color: black; font-size: 20px; background-color: beige; font-family: copperplate; border: 2px solid white; border-radius: 7px;">Acessar Página</button>
+    </form>
+</body>
+
+<script>
+
+    var lista_de_cores = ['black' , 'gray' , 'darkslategray' , 'darkgray'];
+
+    document.body.style.color = 'white';
+
+    document.body.style.fontSize = '30px';
+
+    document.body.style.backgroundColor = lista_de_cores[0];
+        
+    function alternar() {
+        document.body.style.backgroundColor = lista_de_cores [Math.floor(5.9*Math.random())];
+            }
+
+    setInterval(alternar, 1000);
+
+    var sizes = ['50px', '53px'];
+    
+    function manformig() {
+        document.body.style.fontSize = sizes [Math.floor(1.9*Math.random())];
+    }
+    
+
+    setInterval(manformig, 50);
+
+    function acesspaglogin(){
+        location.href=("login");
+    }
+
+</script>
+
+</html>
